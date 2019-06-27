@@ -17,6 +17,7 @@ class discordClient(discord.Client):
             pokeURL = pagecontent.find(id="permalink").get('value')
             pokeEmbed = discord.Embed(title=pokeName, url=pokeURL)
             pokeEmbed.set_image(url=pokeImage)
+            pokeEmbed.set_footer(text="bot by Woovie#5555 | https://github.com/Woovie/pokefuser")
             await initMessage.delete()
             await message.channel.send(embed=pokeEmbed, content="")
 
